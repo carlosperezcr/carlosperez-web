@@ -2,21 +2,11 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://formspree.io; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io; upgrade-insecure-requests" />
   <meta name="robots" content="noindex" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Página no encontrada | Carlos Pérez</title>
-  <script>
-    (function () {
-      var path = window.location.pathname;
-      var aliases = { '/talks': '/ideas/', '/talks/': '/ideas/', '/articles': '/ideas/', '/articles/': '/ideas/' };
-      var target = aliases[path];
-      if (!target && /^\/(?:en\/)?(history|projects|ideas|contact|article\/rpki-ghost)$/.test(path)) {
-        target = path + '/';
-      }
-      if (path === '/en') target = '/en/';
-      if (target) window.location.replace(target + window.location.search + window.location.hash);
-    }());
-  </script>
+  <script src="/js/404-redirect.js"></script>
 </head>
 <body>
   <main>
