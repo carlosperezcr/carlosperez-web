@@ -2,28 +2,9 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://formspree.io; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io; upgrade-insecure-requests" />
   <!-- Normalize legacy URLs before React hydrates prerendered HTML. -->
-  <script>
-    (function () {
-      var path = window.location.pathname;
-      var hash = window.location.hash;
-      var legacy = /^#\/(history|projects|ideas|contact|article\/rpki-ghost|talks|articles)\/?$/.exec(hash);
-      var aliases = { '/talks': '/ideas/', '/articles': '/ideas/' };
-      var canonical = null;
-      if (legacy && path === '/') {
-        var oldPath = '/' + legacy[1];
-        canonical = aliases[oldPath] || oldPath + '/';
-      } else if (aliases[path]) {
-        canonical = aliases[path];
-      } else if (/^\/(?:en\/)?(history|projects|ideas|contact|article\/rpki-ghost)$/.test(path)) {
-        canonical = path + '/';
-      }
-      if (path === '/en') canonical = '/en/';
-      if (canonical) {
-        window.location.replace(canonical + window.location.search + (legacy ? '' : hash));
-      }
-    }());
-  </script>
+  <script src="%BASE_URL%js/legacy-redirect.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0B1628" />
   <meta name="description" content="Carlos Pérez: ingeniería, infraestructura digital y visión estratégica para conectar tecnología, personas y transformación." />
