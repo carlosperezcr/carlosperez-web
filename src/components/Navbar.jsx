@@ -32,6 +32,7 @@ export default function Navbar() {
     { to: '/', label: t('nav.home') },
     { to: '/history/', label: t('nav.history') },
     { to: '/projects/', label: t('nav.projects') },
+    { to: '/services/', label: t('nav.services') },
     { to: '/ideas/', label: t('nav.ideas') },
     { to: '/contact/', label: t('nav.contact') },
   ];
