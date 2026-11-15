@@ -1,3 +1,4 @@
+import ArrowIcon from '../components/ArrowIcon';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './Home.css';
@@ -88,8 +89,8 @@ export default function Home() {
             </div>
             <p className="cp-intro">{c.intro}</p>
             <div className="cp-actions">
-              <Link className="cp-btn cp-btn-primary" to="/projects/">{c.projects}<span aria-hidden="true">↗</span></Link>
-              <Link className="cp-btn cp-btn-secondary" to="/contact/">{c.contact}<span aria-hidden="true">↗</span></Link>
+              <Link className="cp-btn cp-btn-primary" to="/projects/">{c.projects}<ArrowIcon direction="upRight" /></Link>
+              <Link className="cp-btn cp-btn-secondary" to="/contact/">{c.contact}<ArrowIcon direction="upRight" /></Link>
             </div>
 
           </div>
@@ -163,7 +164,7 @@ export default function Home() {
               <img src={photo('04-tower-field-web.webp')} alt="Experiencia de campo en telecomunicaciones" loading="lazy" />
             </div>
           </div>
-          <Link to="/history/" className="cp-text-link">{c.viewProjects} <span aria-hidden="true">↗</span></Link>
+          <Link to="/history/" className="cp-text-link">{c.viewProjects} <ArrowIcon direction="upRight" /></Link>
         </div>
       </section>
 
@@ -173,7 +174,7 @@ export default function Home() {
           <div>
             <h2>{lang === 'es' ? 'De la experiencia a las soluciones.' : 'From experience to solutions.'}</h2>
             <p>{lang === 'es' ? 'Ingeniería, consultoría tecnológica y transformación digital con un enfoque práctico y cercano.' : 'Engineering, technology consulting, and digital transformation with a practical, collaborative approach.'}</p>
-            <Link to="/services/" className="cp-text-link">{c.servicesLink} <span aria-hidden="true">↗</span></Link>
+            <Link to="/services/" className="cp-text-link">{c.servicesLink} <ArrowIcon direction="upRight" /></Link>
           </div>
         </div>
       </section>
@@ -183,7 +184,7 @@ export default function Home() {
             <div className="cp-section-kicker">{c.finalLabel}</div>
             <h2>{c.finalTitle}</h2>
           </div>
-          <Link className="cp-btn cp-btn-light" to="/contact/">{c.finalButton}<span aria-hidden="true">↗</span></Link>
+          <Link className="cp-btn cp-btn-light" to="/contact/">{c.finalButton}<ArrowIcon direction="upRight" /></Link>
         </div>
       </section>
     </main>

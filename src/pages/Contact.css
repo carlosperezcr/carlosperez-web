@@ -20,7 +20,7 @@
 .cp-contact-v2-social-link{display:inline-flex;align-items:center;gap:10px;padding:13px 16px;color:var(--cp-c-text);text-decoration:none;font-size:12px;font-weight:600;border:1px solid var(--cp-c-border);border-radius:5px;background:rgba(255,255,255,.018);transition:border-color .2s,background .2s,transform .2s}
 .cp-contact-v2-social-link:hover{border-color:rgba(56,189,248,.5);background:rgba(56,189,248,.065);transform:translateY(-2px)}
 .cp-contact-v2-social-icon{color:var(--cp-c-accent);font-size:15px}
-.cp-contact-v2-social-arrow{font-size:10px;opacity:.6}
+.cp-contact-v2-social-arrow{width:16px;height:16px;opacity:.7}
 .cp-contact-v2-form-column{padding-top:9px}
 .cp-contact-v2-form-heading{margin-bottom:37px}
 .cp-contact-v2-form-heading .cp-contact-v2-eyebrow{margin-bottom:18px}

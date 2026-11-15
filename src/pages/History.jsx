@@ -1,3 +1,4 @@
+import ArrowIcon from '../components/ArrowIcon';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './History.css';
@@ -86,7 +87,7 @@ export default function History() {
 
       <section className="cp-story-transition">
         <div className="cp-story-container">
-          <span aria-hidden="true">↘</span>
+          <ArrowIcon direction="downRight" />
           <p>{c.transition}</p>
         </div>
       </section>
@@ -135,7 +136,7 @@ export default function History() {
           <p>{c.futureText}</p>
           <Link to="/projects/" className="cp-story-next">
             {c.nextButton}
-            <span aria-hidden="true">↗</span>
+            <ArrowIcon direction="upRight" />
           </Link>
         </div>
       </section>

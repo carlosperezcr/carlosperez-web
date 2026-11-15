@@ -1,3 +1,4 @@
+import ArrowIcon from './ArrowIcon';
 import React, { useState } from 'react';
 import './BgpPolicyLab.css';
 
@@ -50,7 +51,7 @@ export default function BgpPolicyLab({language='es'}) {
   </div>
   <div className="bpl-content"><div className="bpl-card"><label htmlFor="bpl-announcement">{t.choose}</label><select id="bpl-announcement" value={selection} onChange={e=>choose(e.target.value)}>{t.examples.map((example,index)=><option value={index} key={index}>{example.name}</option>)}</select>
    <div className="bpl-data"><div><small>{t.prefix}</small><strong>{scenario.prefix}</strong></div><div><small>{t.origin}</small><strong>{scenario.asn}</strong></div><div><small>{t.rpki}</small><strong>{scenario.rpki}</strong></div></div>
-   <div className="bpl-actions"><button type="button" className="bpl-primary" onClick={()=>setEvaluated(true)}>{t.evaluate} →</button><button type="button" className="bpl-secondary" onClick={()=>{setSelection(0);setEvaluated(false)}}>↺ {t.reset}</button></div>
+   <div className="bpl-actions"><button type="button" className="bpl-primary" onClick={()=>setEvaluated(true)}>{t.evaluate} <ArrowIcon direction="right" /></button><button type="button" className="bpl-secondary" onClick={()=>{setSelection(0);setEvaluated(false)}}>↺ {t.reset}</button></div>
   </div><div className="bpl-card bpl-results" aria-live="polite"><div className="bpl-result-head"><span>{t.verdict}</span><strong className={'bpl-verdict '+(evaluated?(accepted?'yes':'no'):'neutral')}>{evaluated?(accepted?t.accept:t.reject):t.pending}</strong></div>
    <div className="bpl-check-title">{t.checks}</div>
    {[[t.authorization,scenario.allow],[t.originCheck,scenario.origin],[t.maxLength,scenario.length]].map(([name,ok])=><div className="bpl-check" key={name}><span>{name}</span><strong className={evaluated?(ok?'bpl-pass':'bpl-fail'):''}>{!evaluated?'—':ok?'✓ '+t.allowed:'× '+t.denied}</strong></div>)}

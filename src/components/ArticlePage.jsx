@@ -1,3 +1,4 @@
+import ArrowIcon from './ArrowIcon';
 import { publicAsset } from '../utils/publicAsset';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
@@ -48,7 +49,7 @@ export default function ArticlePage({ articleKey }) {
   return (
     <main className="cp-article-page">
       <div className="cp-article-shell">
-        <Link to="/ideas/" className="cp-article-back">← {en ? 'Back to ideas' : 'Volver a Ideas'}</Link>
+        <Link to="/ideas/" className="cp-article-back"><ArrowIcon direction="left" /> {en ? 'Back to ideas' : 'Volver a Ideas'}</Link>
         <article className="cp-article-layout">
           <header className="cp-article-hero">
             <span className="cp-article-eyebrow"><span className="cp-article-dot" />{t(`${articleKey}.label`)}</span>
@@ -63,7 +64,7 @@ export default function ArticlePage({ articleKey }) {
           <div className="cp-article-prose">
             {Array.isArray(content) ? content.map((block, index) => <Block key={index} block={block} index={index} />) : <p>{en ? 'Content unavailable.' : 'Contenido no disponible.'}</p>}
           </div>
-          <footer className="cp-article-end"><Link to="/ideas/" className="cp-article-back">← {en ? 'Explore more ideas' : 'Explorar más ideas'}</Link></footer>
+          <footer className="cp-article-end"><Link to="/ideas/" className="cp-article-back"><ArrowIcon direction="left" /> {en ? 'Explore more ideas' : 'Explorar más ideas'}</Link></footer>
         </article>
       </div>
     </main>

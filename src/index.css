@@ -1776,3 +1776,10 @@ body::after {
 .cp-contact-feedback--success{background:#e9f7ef;color:#20573b}
 .cp-contact-feedback--error{background:#fff0ec;color:#8d342b}
 .contact-form input:focus-visible,.contact-form textarea:focus-visible,.contact-form button:focus-visible{outline:3px solid #38bdf8;outline-offset:3px}
+
+/* Iconos SVG de navegación compartidos */
+.cp-arrow-icon {
+  display: inline-block;
+  flex-shrink: 0;
+  vertical-align: -0.18em;
+}
