@@ -50,18 +50,18 @@
 
 /* LinkedIn-inspired brand artwork, with legible editorial content */
 .cp-services-hero{background:#0B1628;isolation:isolate}
-.cp-services-hero::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(11,22,40,.98) 0%,rgba(11,22,40,.94) 31%,rgba(11,22,40,.66) 55%,rgba(11,22,40,.15) 100%),url('/brand/services/services-network-premium.webp') center 54% / cover no-repeat}
+.cp-services-hero::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(11,22,40,.95) 0%,rgba(11,22,40,.84) 29%,rgba(11,22,40,.38) 55%,rgba(11,22,40,.03) 100%),url('/brand/services/services-network-premium.webp') center 54% / cover no-repeat}
 .cp-services-hero::after{display:none}
 .cp-services-grid-art{opacity:.10}
 .cp-services-hero-inner{position:relative}
 .cp-services-end{position:relative;isolation:isolate;overflow:hidden;background:#11253e}
-.cp-services-end::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(17,37,62,.99) 0%,rgba(17,37,62,.94) 45%,rgba(17,37,62,.48) 100%),url('/brand/services/services-network-premium.webp') 75% 63% / cover no-repeat;opacity:.9}
+.cp-services-end::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(17,37,62,.94) 0%,rgba(17,37,62,.78) 39%,rgba(17,37,62,.16) 100%),url('/brand/services/services-network-premium.webp') 75% 63% / cover no-repeat;opacity:1}
 .cp-services-end-inner{position:relative}
 @media(max-width:850px){
-  .cp-services-hero::before{background-position:center,60% center;background-image:linear-gradient(90deg,rgba(11,22,40,.97),rgba(11,22,40,.79)),url('/brand/services/services-network-premium.webp')}
-  .cp-services-end::before{background-position:center,68% center;background-image:linear-gradient(90deg,rgba(17,37,62,.97),rgba(17,37,62,.74)),url('/brand/services/services-network-premium.webp')}
+  .cp-services-hero::before{background-position:center,60% center;background-image:linear-gradient(90deg,rgba(11,22,40,.91),rgba(11,22,40,.48)),url('/brand/services/services-network-premium.webp')}
+  .cp-services-end::before{background-position:center,68% center;background-image:linear-gradient(90deg,rgba(17,37,62,.92),rgba(17,37,62,.50)),url('/brand/services/services-network-premium.webp')}
 }
 @media(max-width:550px){
-  .cp-services-hero::before{background-position:center,65% center;background-image:linear-gradient(90deg,rgba(11,22,40,.96),rgba(11,22,40,.80)),url('/brand/services/services-network-premium.webp')}
+  .cp-services-hero::before{background-position:center,65% center;background-image:linear-gradient(90deg,rgba(11,22,40,.91),rgba(11,22,40,.60)),url('/brand/services/services-network-premium.webp')}
   .cp-services-end::before{background-position:center,75% center}
 }
