@@ -48,13 +48,20 @@
 @media(max-width:550px){.cp-services-wrap{width:calc(100% - 36px)}.cp-services-hero-inner{padding-block:95px 75px}.cp-services-offerings,.cp-services-method{padding-block:72px}.cp-services-card{grid-template-columns:1fr;gap:14px;min-height:0;padding:23px}.cp-services-card-number{margin-bottom:0}.cp-services-card-copy{border-left:0;padding-left:0}.cp-services-steps{grid-template-columns:1fr;gap:22px}.cp-services-end{padding-block:70px}.cp-services-button{width:100%;justify-content:space-between}.cp-services-section-lead,.cp-services-method-lead{font-size:15.5px}}
 @media(prefers-reduced-motion:reduce){.cp-services-button,.cp-services-card{transition:none}.cp-services-button:hover,.cp-services-card:hover{transform:none}}
 
-/* Network-wave visual system: lightweight, non-interactive and brand-aligned */
-.cp-services-hero::before{content:"";position:absolute;z-index:-1;right:-4%;bottom:-10%;width:min(74%,1020px);height:85%;background:url('/brand/services-network-waves.svg') center bottom / contain no-repeat;opacity:.75;pointer-events:none}
+/* LinkedIn-inspired brand artwork, with legible editorial content */
+.cp-services-hero{background:#0B1628;isolation:isolate}
+.cp-services-hero::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(11,22,40,.98) 0%,rgba(11,22,40,.94) 31%,rgba(11,22,40,.66) 55%,rgba(11,22,40,.15) 100%),url('/brand/services/services-network-premium.webp') center 54% / cover no-repeat}
 .cp-services-hero::after{display:none}
+.cp-services-grid-art{opacity:.10}
 .cp-services-hero-inner{position:relative}
-.cp-services-hero-inner::before{content:"";position:absolute;inset:0 -5vw;z-index:-1;background:linear-gradient(90deg,#0B1628 2%,rgba(11,22,40,.96) 34%,rgba(11,22,40,.70) 58%,transparent 90%);pointer-events:none}
-.cp-services-end{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 90% 100%,#183d60 0%,transparent 58%),#11253e}
-.cp-services-end::before{content:"";position:absolute;z-index:-1;right:-7%;bottom:-44%;width:min(65%,800px);height:150%;background:url('/brand/services-network-waves.svg') center / contain no-repeat;opacity:.29;pointer-events:none}
+.cp-services-end{position:relative;isolation:isolate;overflow:hidden;background:#11253e}
+.cp-services-end::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(17,37,62,.99) 0%,rgba(17,37,62,.94) 45%,rgba(17,37,62,.48) 100%),url('/brand/services/services-network-premium.webp') 75% 63% / cover no-repeat;opacity:.9}
 .cp-services-end-inner{position:relative}
-@media(max-width:850px){.cp-services-hero::before{right:-35%;width:110%;opacity:.37}.cp-services-hero-inner::before{background:linear-gradient(90deg,rgba(11,22,40,.98),rgba(11,22,40,.78))}.cp-services-end::before{right:-25%;width:100%;opacity:.18}}
-@media(max-width:550px){.cp-services-hero::before{right:-65%;bottom:-15%;width:160%;opacity:.22}.cp-services-end::before{right:-55%;width:150%;opacity:.15}}
+@media(max-width:850px){
+  .cp-services-hero::before{background-position:center,60% center;background-image:linear-gradient(90deg,rgba(11,22,40,.97),rgba(11,22,40,.79)),url('/brand/services/services-network-premium.webp')}
+  .cp-services-end::before{background-position:center,68% center;background-image:linear-gradient(90deg,rgba(17,37,62,.97),rgba(17,37,62,.74)),url('/brand/services/services-network-premium.webp')}
+}
+@media(max-width:550px){
+  .cp-services-hero::before{background-position:center,65% center;background-image:linear-gradient(90deg,rgba(11,22,40,.96),rgba(11,22,40,.80)),url('/brand/services/services-network-premium.webp')}
+  .cp-services-end::before{background-position:center,75% center}
+}
