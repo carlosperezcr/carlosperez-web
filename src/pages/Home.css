@@ -915,3 +915,9 @@
     width: 100%;
   }
 }
+
+/* Brand-aligned, compact entry to the services page */
+.cp-home .cp-services-teaser{background:#F6F8FB;color:#142B49;border-top:1px solid #dce7f1}
+.cp-home .cp-services-teaser .cp-section-kicker{color:#076DC5}
+.cp-home .cp-services-teaser p{margin:22px 0 0;color:#52647A;font-size:17px;line-height:1.85;max-width:760px}
+@media(max-width:700px){.cp-home .cp-services-teaser p{font-size:15.5px}}
