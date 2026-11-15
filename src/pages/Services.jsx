@@ -85,7 +85,7 @@ export default function Services() {
       </section>
       <section className="cp-services-offerings" id="areas">
         <div className="cp-services-wrap">
-          <p className="cp-services-eyebrow cp-services-eyebrow-light">01 / {c.eyebrow}</p>
+          <p className="cp-services-eyebrow cp-services-eyebrow-light">{c.eyebrow}</p>
           <h2>{c.heading}</h2>
           <p className="cp-services-section-lead">{c.description}</p>
           <div className="cp-services-cards">
