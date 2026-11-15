@@ -1,6 +1,7 @@
+import ArrowIcon from '../components/ArrowIcon';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FaGithub, FaLinkedin, FaYoutube, FaExternalLinkAlt, FaPaperPlane, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaYoutube, FaPaperPlane, FaEnvelope } from 'react-icons/fa';
 import './Contact.css';
 
 export default function Contact() {
@@ -80,7 +81,7 @@ export default function Contact() {
               <p className="cp-contact-v2-description">{t('contact.v2_description')}</p>
               <div className="cp-contact-v2-direct">
                 <span className="cp-contact-v2-small-label">{t('contact.v2_direct_label')}</span>
-                <a href={`mailto:${emailAddress}`}><FaEnvelope aria-hidden="true" />{emailAddress}<FaExternalLinkAlt aria-hidden="true" /></a>
+                <a href={`mailto:${emailAddress}`}><FaEnvelope aria-hidden="true" />{emailAddress}<ArrowIcon direction="upRight" /></a>
               </div>
               <div className="cp-contact-v2-social">
                 <span className="cp-contact-v2-small-label">{t('contact.v2_social_label')}</span>
@@ -89,7 +90,7 @@ export default function Contact() {
                     <a key={social.name} href={social.url} target="_blank" rel="noopener noreferrer" aria-label={`${social.name} — ${social.description}`} className="cp-contact-v2-social-link">
                       <span className="cp-contact-v2-social-icon">{social.icon}</span>
                       <span>{social.name}</span>
-                      <FaExternalLinkAlt className="cp-contact-v2-social-arrow" aria-hidden="true" />
+                      <ArrowIcon direction="upRight" className="cp-contact-v2-social-arrow" />
                     </a>
                   ))}
                 </div>

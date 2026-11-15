@@ -1,3 +1,4 @@
+import ArrowIcon from '../components/ArrowIcon';
 import { lazy, Suspense } from 'react';
 import { useState } from 'react';
 const DataCenterContinuityLab = lazy(() => import('../components/DataCenterContinuityLab'));
@@ -195,7 +196,7 @@ export default function Projects() {
           <p className="cp-v2-kicker">{c.kicker}</p>
           <h1 id="cp-v2-title">{c.heroA}<br/><span>{c.heroB}</span></h1>
           <p className="cp-v2-hero-lead">{c.lead}</p>
-          <a className="cp-v2-explore" href="#casos">{c.explore}<span aria-hidden="true">↘</span></a>
+          <a className="cp-v2-explore" href="#casos">{c.explore}<ArrowIcon direction="downRight" /></a>
         </div>
         <div className="cp-v2-hero-decoration" aria-hidden="true"><span/><span/><span/></div>
       </section>
@@ -237,7 +238,7 @@ export default function Projects() {
             ))}
           </div>
           <p className="cp-v2-services-note">{c.serviceNote}</p>
-          <Link className="cp-v2-services-link" to="/contact/">{c.cta}<span aria-hidden="true">↗</span></Link>
+          <Link className="cp-v2-services-link" to="/contact/">{c.cta}<ArrowIcon direction="upRight" /></Link>
         </div>
       </section>
 
@@ -290,7 +291,7 @@ export default function Projects() {
       <section className="cp-v2-contact">
         <div className="cp-v2-wrap cp-v2-contact-grid">
           <div><h2>{c.endTitle}</h2><p>{c.endText}</p></div>
-          <Link to="/contact/" className="cp-v2-button">{c.cta}<span aria-hidden="true">↗</span></Link>
+          <Link to="/contact/" className="cp-v2-button">{c.cta}<ArrowIcon direction="upRight" /></Link>
         </div>
       </section>
     </main>

@@ -1,3 +1,4 @@
+import ArrowIcon from './ArrowIcon';
 import { useEffect, useState } from 'react';
 import './InternetJourney.css';
 
@@ -134,8 +135,8 @@ export default function InternetJourney({language='es'}) {
           <div className="ij-progress" aria-hidden="true">{selected.steps.map((_,i)=><span key={i} className={i===step?'is-active':i<step?'is-complete':''}/>)}</div>
           <h3>{selected.steps[step][0]}</h3><p>{selected.steps[step][1]}</p>
           <div className="ij-story__buttons">
-            <button type="button" onClick={()=>{setPlaying(false);goToStep(Math.max(0,step-1))}} disabled={step===0}>← {d.previous}</button>
-            <button type="button" className="ij-story__next" onClick={()=>{setPlaying(false);goToStep(step===3?0:step+1)}}>{step===3?d.restart:d.next+' →'}</button>
+            <button type="button" onClick={()=>{setPlaying(false);goToStep(Math.max(0,step-1))}} disabled={step===0}><ArrowIcon direction="left" /> {d.previous}</button>
+            <button type="button" className="ij-story__next" onClick={()=>{setPlaying(false);goToStep(step===3?0:step+1)}}>{step===3?d.restart:<>{d.next} <ArrowIcon direction="right" /></>}</button>
             <button type="button" className="ij-story__autoplay" aria-pressed={playing} onClick={()=>{
               if(step===3){goToStep(0);setPlaying(true)}
               else setPlaying(v=>!v)

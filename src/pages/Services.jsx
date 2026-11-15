@@ -1,3 +1,4 @@
+import ArrowIcon from '../components/ArrowIcon';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './Services.css';
@@ -80,7 +81,7 @@ export default function Services() {
           <p className="cp-services-eyebrow">{c.eyebrow}</p>
           <h1>{c.title}<br /><span>{c.accent}</span></h1>
           <p className="cp-services-lead">{c.intro}</p>
-          <Link to="/contact/" className="cp-services-button">{c.talk}<span aria-hidden="true">↗</span></Link>
+          <Link to="/contact/" className="cp-services-button">{c.talk}<ArrowIcon direction="upRight" /></Link>
         </div>
       </section>
       <section className="cp-services-offerings" id="areas">
@@ -96,7 +97,7 @@ export default function Services() {
                 <div className="cp-services-card-copy">
                   <h3>{title}</h3>
                   <p>{description}</p>
-                  <Link to="/contact/" className="cp-services-text-link">{c.explore} <span aria-hidden="true">↗</span></Link>
+                  <Link to="/contact/" className="cp-services-text-link">{c.explore} <ArrowIcon direction="upRight" /></Link>
                 </div>
               </article>
             ))}
@@ -119,7 +120,7 @@ export default function Services() {
       <section className="cp-services-end">
         <div className="cp-services-wrap cp-services-end-inner">
           <div><p className="cp-services-eyebrow">{c.eyebrow}</p><h2>{c.finalTitle}</h2><p>{c.finalText}</p></div>
-          <Link to="/contact/" className="cp-services-button">{c.finalButton}<span aria-hidden="true">↗</span></Link>
+          <Link to="/contact/" className="cp-services-button">{c.finalButton}<ArrowIcon direction="upRight" /></Link>
         </div>
       </section>
     </main>
