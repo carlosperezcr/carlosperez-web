@@ -2,7 +2,7 @@ import { readFile, writeFile, mkdir, rm } from 'node:fs/promises';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
-const routes = {"/": ["Carlos Pérez | Ingeniería y transformación digital", "Carlos Pérez: ingeniería, infraestructura digital y visión estratégica para conectar tecnología, personas y transformación."], "/history/": ["Mi historia | Carlos Pérez", "Una trayectoria construida en campo, proyectos internacionales, liderazgo e infraestructura crítica."], "/projects/": ["Proyectos | Carlos Pérez", "Casos de ingeniería de telecomunicaciones y demostraciones educativas interactivas."], "/ideas/": ["Ideas | Carlos Pérez", "Perspectivas sobre infraestructura de Internet, seguridad del enrutamiento y colaboración internacional."], "/contact/": ["Contacto | Carlos Pérez", "Conversemos sobre tecnología, infraestructura y colaboración en ingeniería."], "/article/rpki-ghost/": ["RPKI y seguridad del enrutamiento | Carlos Pérez", "Un artículo sobre seguridad del enrutamiento y validación de rutas mediante RPKI."]};
+const routes = {"/": ["Carlos Pérez | Ingeniería y transformación digital", "Carlos Pérez: ingeniería, infraestructura digital y visión estratégica para conectar tecnología, personas y transformación."], "/history/": ["Mi historia | Carlos Pérez", "Una trayectoria construida en campo, proyectos internacionales, liderazgo e infraestructura crítica."], "/projects/": ["Proyectos | Carlos Pérez", "Casos de ingeniería de telecomunicaciones y demostraciones educativas interactivas."], "/ideas/": ["Ideas | Carlos Pérez", "Perspectivas sobre infraestructura de Internet, seguridad del enrutamiento y colaboración internacional."], "/services/": ["Servicios | Carlos Pérez", "Ingeniería, consultoría tecnológica, transformación digital y presencia digital."], "/contact/": ["Contacto | Carlos Pérez", "Conversemos sobre tecnología, infraestructura y colaboración en ingeniería."], "/article/rpki-ghost/": ["RPKI y seguridad del enrutamiento | Carlos Pérez", "Un artículo sobre seguridad del enrutamiento y validación de rutas mediante RPKI."]};
 const dist = 'dist';
 const template = await readFile(join(dist, 'index.html'), 'utf8');
 const { render } = await import(pathToFileURL(join(process.cwd(), '.seo-ssr/entry-server.js')).href);
@@ -15,6 +15,7 @@ for (const [route, [esTitle, esDescription]] of Object.entries(routes)) {
     '/history/': ['My Story | Carlos Pérez', 'A career shaped by field engineering, international projects, leadership, and critical infrastructure.'],
     '/projects/': ['Projects | Carlos Pérez', 'Telecommunications engineering projects and interactive educational demonstrations.'],
     '/ideas/': ['Ideas | Carlos Pérez', 'Perspectives on Internet infrastructure, routing security, and collaboration.'],
+    '/services/': ['Services | Carlos Pérez', 'Engineering, technology consulting, digital transformation, and digital presence.'],
     '/contact/': ['Contact | Carlos Pérez', 'Let’s talk about technology, infrastructure, and engineering collaboration.'],
     '/article/rpki-ghost/': ['RPKI and Routing Security | Carlos Pérez', 'An article about routing security and RPKI route validation.']
   };
