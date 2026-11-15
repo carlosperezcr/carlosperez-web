@@ -16,6 +16,7 @@ const content = {
     intro: 'Ingeniero de redes especializado en infraestructura de Internet, interconexión y resiliencia, con una visión orientada a la innovación, automatización y transformación digital.',
     projects: 'Explorar proyectos',
     contact: 'Hablemos',
+    servicesLink: 'Explorar servicios',
     explore: 'EXPLORAR',
     aboutLabel: 'SOBRE MÍ',
     aboutTitle: 'La tecnología conecta. Las personas transforman.',
@@ -46,6 +47,7 @@ const content = {
     intro: 'Network engineer specializing in Internet infrastructure, interconnection, and resilience, with a focus on innovation, automation, and digital transformation.',
     projects: 'Explore projects',
     contact: "Let's talk",
+    servicesLink: 'Explore services',
     explore: 'EXPLORE',
     aboutLabel: 'ABOUT ME',
     aboutTitle: 'Technology connects. People transform.',
@@ -165,6 +167,16 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="cp-services-teaser cp-section">
+        <div className="cp-wrap cp-about-grid">
+          <div className="cp-section-kicker">{lang === 'es' ? 'COLABORACIÓN' : 'COLLABORATION'}</div>
+          <div>
+            <h2>{lang === 'es' ? 'De la experiencia a las soluciones.' : 'From experience to solutions.'}</h2>
+            <p>{lang === 'es' ? 'Ingeniería, consultoría tecnológica y transformación digital con un enfoque práctico y cercano.' : 'Engineering, technology consulting, and digital transformation with a practical, collaborative approach.'}</p>
+            <Link to="/services/" className="cp-text-link">{c.servicesLink} <span aria-hidden="true">↗</span></Link>
+          </div>
+        </div>
+      </section>
       <section className="cp-contact-strip">
         <div className="cp-wrap cp-contact-inner">
           <div>

@@ -6,6 +6,7 @@ import './index.css';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
+import Services from './pages/Services';
 import History from './pages/History';
 import Ideas from './pages/Ideas';
 import Contact from './pages/Contact';
@@ -55,6 +56,9 @@ function PageMetadata() {
       '/ideas': en
         ? ['Ideas | Carlos Pérez', 'Perspectives on Internet infrastructure, routing security, and international collaboration.']
         : ['Ideas | Carlos Pérez', 'Perspectivas sobre infraestructura de Internet, seguridad del enrutamiento y colaboración internacional.'],
+      '/services': en
+        ? ['Services | Carlos Pérez', 'Engineering, technology consulting, digital transformation, and digital presence.']
+        : ['Servicios | Carlos Pérez', 'Ingeniería, consultoría tecnológica, transformación digital y presencia digital.'],
       '/contact': en
         ? ['Contact | Carlos Pérez', 'Let’s talk about technology, infrastructure, and engineering collaboration.']
         : ['Contacto | Carlos Pérez', 'Conversemos sobre tecnología, infraestructura y colaboración en ingeniería.']
@@ -140,6 +144,7 @@ export function AppContent() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects/" element={<Projects />} />
+        <Route path="/services/" element={<Services />} />
         <Route path="/history/" element={<History />} />
         <Route path="/ideas/" element={<Ideas />} />
         <Route path="/talks" element={<Navigate to="/ideas/" replace />} />
