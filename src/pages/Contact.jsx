@@ -24,7 +24,19 @@ export default function Contact() {
     const name = String(data.get('name') || '').trim();
     const email = String(data.get('email') || '').trim();
     const message = String(data.get('message') || '').trim();
-    if (!name || !email || message.length < 10) return;
+    // Repeat essential browser constraints before submission.
+    const emailField = form.elements.namedItem('email');
+    if (
+      !name || name.length > 120 ||
+      !email || email.length > 254 || !emailField?.checkValidity() ||
+      message.length < 10 || message.length > 4000
+    ) {
+      setFeedback({ type: 'error', message: t('contact.validation_error') });
+      return;
+    }
+    data.set('name', name);
+    data.set('email', email);
+    data.set('message', message);
     setFeedback(null);
     if (!endpoint) {
       const subject = encodeURIComponent(`Contacto web - ${name}`);
@@ -36,7 +48,15 @@ export default function Contact() {
     setIsSending(true);
     try {
       const response = await fetch(endpoint, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
-      if (!response.ok) throw new Error('Contact request failed');
+      if (!response.ok) {
+        const key = response.status === 429
+          ? 'contact.rate_limit_error'
+          : [400, 403, 422].includes(response.status)
+            ? 'contact.verification_error'
+            : 'contact.error_message';
+        setFeedback({ type: 'error', message: t(key) });
+        return;
+      }
       form.reset();
       setFeedback({ type: 'success', message: t('contact.success_message') });
     } catch {
